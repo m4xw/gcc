@@ -12,6 +12,7 @@ AC_DEFUN([GCC_AC_THREAD_HEADER],
 [
 case $1 in
     aix)	thread_header=config/rs6000/gthr-aix.h ;;
+    dkp)	thread_header=config/rs6000/gthr-dkp.h ;;
     dce)	thread_header=config/pa/gthr-dce.h ;;
     lynx)	thread_header=config/gthr-lynx.h ;;
     mipssde)	thread_header=config/mips/gthr-mipssde.h ;;
