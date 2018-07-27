@@ -68,5 +68,7 @@ cortex-a57-fma-steering.o: $(srcdir)/config/aarch64/cortex-a57-fma-steering.c \
 		$(srcdir)/config/aarch64/cortex-a57-fma-steering.c
 
 comma=,
-MULTILIB_OPTIONS    = $(subst $(comma),/, $(patsubst %, mabi=%, $(subst $(comma),$(comma)mabi=,$(TM_MULTILIB_CONFIG))))
-MULTILIB_DIRNAMES   = $(subst $(comma), ,$(TM_MULTILIB_CONFIG))
+MULTILIB_OPTIONS    = mcmodel=large fPIC
+MULTILIB_DIRNAMES   = large pic
+MULTILIB_REQUIRED   = mcmodel=large fPIC
+MULTILIB_MATCHES    = fPIC=fpic fPIC=fpie fPIC=fPIE
