@@ -945,6 +945,7 @@ aarch64*-*-elf | aarch64*-*-fuchsia* | aarch64*-*-rtems*)
 	case $target in
 	aarch64-*-elf*)
 		use_gcc_stdint=wrap
+		tm_defines="${tm_defines}  TARGET_DEFAULT_ASYNC_UNWIND_TABLES=1"
 		;;
         aarch64-*-fuchsia*)
                 tm_file="${tm_file} fuchsia.h"
